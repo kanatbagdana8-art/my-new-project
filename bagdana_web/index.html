@@ -1,0 +1,192 @@
+```html
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedCare Hospital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">MedCare</div>
+
+    <nav>
+        <a href="#home">Басты бет</a>
+        <a href="#about">Біз туралы</a>
+        <a href="#services">Қызметтер</a>
+        <a href="#doctors">Дәрігерлер</a>
+        <a href="#contact">Байланыс</a>
+    </nav>
+
+    <button class="appointment-btn" onclick="openForm()">Қабылдауға жазылу</button>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-text">
+        <h1>Сіздің денсаулығыңыз – біздің басты мақсатымыз</h1>
+        <p>
+            MedCare Hospital – заманауи медициналық қызметтер,
+            тәжірибелі дәрігерлер және пациенттерге сапалы көмек.
+        </p>
+
+        <button onclick="openForm()">Дәрігерге жазылу</button>
+    </div>
+
+    <div class="hero-card">
+        <div class="medical-icon">✚</div>
+        <h2>24/7</h2>
+        <p>Жедел медициналық көмек</p>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2>Біз туралы</h2>
+    <p>
+        MedCare Hospital – пациенттердің денсаулығына ерекше көңіл бөлетін
+        заманауи медициналық орталық. Бізде диагностика, емдеу және
+        профилактикалық қызметтердің бірнеше түрі көрсетіледі.
+    </p>
+
+    <div class="statistics">
+        <div>
+            <h3>15+</h3>
+            <p>Жыл тәжірибе</p>
+        </div>
+
+        <div>
+            <h3>50+</h3>
+            <p>Дәрігер</p>
+        </div>
+
+        <div>
+            <h3>10000+</h3>
+            <p>Пациент</p>
+        </div>
+
+        <div>
+            <h3>24/7</h3>
+            <p>Қызмет көрсету</p>
+        </div>
+    </div>
+</section>
+
+<section class="services" id="services">
+    <h2>Біздің қызметтер</h2>
+
+    <div class="service-container">
+
+        <div class="service-card">
+            <div class="icon">🩺</div>
+            <h3>Диагностика</h3>
+            <p>Заманауи медициналық тексеру және диагностика.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="icon">❤️</div>
+            <h3>Кардиология</h3>
+            <p>Жүрек және қан тамырлары ауруларын тексеру.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="icon">🦷</div>
+            <h3>Стоматология</h3>
+            <p>Тіс емдеу және ауыз қуысына күтім жасау.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="icon">💊</div>
+            <h3>Терапия</h3>
+            <p>Жалпы медициналық тексеру және емдеу.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="doctors" id="doctors">
+    <h2>Біздің дәрігерлер</h2>
+
+    <div class="doctor-container">
+
+        <div class="doctor-card">
+            <div class="doctor-photo">👨‍⚕️</div>
+            <h3>Айдос Нұрланұлы</h3>
+            <p>Кардиолог</p>
+            <span>12 жыл тәжірибе</span>
+        </div>
+
+        <div class="doctor-card">
+            <div class="doctor-photo">👩‍⚕️</div>
+            <h3>Айгүл Серікқызы</h3>
+            <p>Терапевт</p>
+            <span>10 жыл тәжірибе</span>
+        </div>
+
+        <div class="doctor-card">
+            <div class="doctor-photo">👨‍⚕️</div>
+            <h3>Ерлан Асқарұлы</h3>
+            <p>Хирург</p>
+            <span>15 жыл тәжірибе</span>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Бізбен байланыс</h2>
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+            <h3>MedCare Hospital</h3>
+            <p>📍 Алматы қаласы, Абая көшесі, 25</p>
+            <p>📞 +7 700 123 45 67</p>
+            <p>✉ info@medcare.kz</p>
+            <p>🕐 Күн сайын: 08:00 – 20:00</p>
+        </div>
+
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Атыңыз" required>
+            <input type="tel" id="phone" placeholder="Телефон нөмірі" required>
+            <textarea id="message" placeholder="Хабарламаңыз" required></textarea>
+            <button type="submit">Жіберу</button>
+        </form>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 MedCare Hospital. Барлық құқықтар қорғалған.</p>
+</footer>
+
+<div class="modal" id="appointmentModal">
+    <div class="modal-content">
+        <span class="close" onclick="closeForm()">&times;</span>
+
+        <h2>Дәрігерге жазылу</h2>
+
+        <form id="appointmentForm">
+            <input type="text" placeholder="Атыңыз" required>
+            <input type="tel" placeholder="Телефон нөмірі" required>
+
+            <select required>
+                <option value="">Дәрігерді таңдаңыз</option>
+                <option>Кардиолог</option>
+                <option>Терапевт</option>
+                <option>Хирург</option>
+                <option>Стоматолог</option>
+            </select>
+
+            <input type="date" required>
+
+            <button type="submit">Жазылу</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
